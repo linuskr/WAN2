@@ -67,7 +67,6 @@ defiledlands:vulnerability
 defiledlands:grounded
 defiledlands:bleeding
 dungeonmobs:potion_addled
-growthcraft_cellar:potion.tipsy
 potioncore:love
 potioncore:repair
 potioncore:flight
@@ -177,4 +176,3 @@ wards:effect_wrecking
 wards:effect_implosion
 wards:effect_destruction
 wards:effect_smack
-wards:effect_electric_efficiency
