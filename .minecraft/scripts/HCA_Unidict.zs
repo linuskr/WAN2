@@ -1,0 +1,232 @@
+import crafttweaker.item.IItemStack as IItemStack;
+import crafttweaker.liquid.ILiquidDefinition;
+import crafttweaker.liquid.ILiquidStack;
+
+print("Running 'HCA_Unidict.zs'...");
+
+// Misc Items from IE to Dictonary ================================================================================
+
+val wireCoilCopper = <ore:wireCoilCopper>;
+val wireCoilAluminum = <ore:wireCoilAluminum>;
+val wireCoilElectrum = <ore:wireCoilElectrum>;
+val wireCoilRedstone  = <ore:wireCoilRedstone>;
+val wireCoilSteel = <ore:wireCoilSteel>;
+val wireCoilHemp = <ore:wireCoilHemp>;
+val wireCoilCopperInsulated = <ore:wireCoilCopperInsulated>;
+val wireCoilElectrumInsulated = <ore:wireCoilElectrumInsulated>;
+val wireCopper = <ore:wireCopper>;
+val wireElectrum = <ore:wireElectrum>;
+val wireAluminum  = <ore:wireAluminum>;
+val wireSteel  = <ore:wireSteel>;
+
+
+wireCoilCopper.add(<immersiveengineering:wirecoil:0>);
+wireCoilAluminum.add(<immersiveengineering:wirecoil:2>);
+wireCoilElectrum.add(<immersiveengineering:wirecoil:1>);
+wireCoilRedstone.add(<immersiveengineering:wirecoil:5>);
+wireCoilSteel.add(<immersiveengineering:wirecoil:4>);
+wireCoilHemp.add(<immersiveengineering:wirecoil:3>);
+wireCoilCopperInsulated.add(<immersiveengineering:wirecoil:6>);
+wireCoilElectrumInsulated.add(<immersiveengineering:wirecoil:7>);
+wireCopper.add(<immersiveengineering:material:20>);
+wireElectrum.add(<immersiveengineering:material:21>);
+wireAluminum.add(<immersiveengineering:material:22>);
+wireSteel.add(<immersiveengineering:material:23>);
+wireCoilCopper.add(<immersiveengineering:wirecoil:0>);
+wireCoilElectrum.add(<immersiveengineering:wirecoil:1>);
+wireCoilAluminum.add(<immersiveengineering:wirecoil:2>);
+wireCoilHemp.add(<immersiveengineering:wirecoil:3>);
+wireCoilSteel.add(<immersiveengineering:wirecoil:4>);
+wireCoilRedstone.add(<immersiveengineering:wirecoil:5>);
+
+// Add Bucket to Dictonary ==========================================================================================
+val bucket = <ore:bucket>;
+bucket.add(<minecraft:bucket>);
+
+//unify Enchants ==================================================================================================
+val allEnchants = <ore:all_Enchants>;
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 0 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 10 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 0 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 0 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 0 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 0 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 1 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 1 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 1 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 1 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 2 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 2 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 2 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 2 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 3 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 3 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 3 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 3 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 5 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 5 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 5 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 6 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 7 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 7 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 7 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 8 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 8 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 8 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 9 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 10 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 16 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 17 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 18 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 18 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 18 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 18 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 18 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 19 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 19 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 20 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 20 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 21 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 21 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 21 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 22 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 22 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 22 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 32 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 32 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 32 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 32 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 32 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 33 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 34 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 34 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 34 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 35 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 35 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 35 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 48 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 48 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 48 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 48 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 48 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 49 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 49 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 50 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 51 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 61 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 61 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 61 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 62 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 62 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 62 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 70 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 71 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 26 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 26 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 26 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 27 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 27 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 27 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 28 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 57 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 58 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 30 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 31 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 45 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 45 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 45 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 45 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 46 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 46 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 46 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 47 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 47 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 47 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 47 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 52 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 52 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 52 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 52 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 53 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 54 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 55 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 55 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 55 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 56 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 56 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 42 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 42 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 42 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 43 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 11 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 11 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 11 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 11 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 5 as short, id: 11 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 14 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 14 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 14 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 14 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 23 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 15 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 24 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 25 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 13 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 13 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 13 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 36 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 37 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 37 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 37 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 38 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 38 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 38 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 39 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 39 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 39 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 40 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 29 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 29 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 29 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 4 as short, id: 29 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 40 as short}]}));
+allEnchants.add(<minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 40 as short}]}));
+
+
+//Stone Rods with Oredict ======================================================================================================
+recipes.addShaped(<tconstruct:stone_stick> * 2, [[null, null, <ore:stone>],[null, <ore:stone>, null], [<ore:stone>, null, null]]);
+
+//add Immersive Engineering Sticks to the Rod Dictionary
+var rodIron = <ore:rodIron>;
+rodIron.add(<immersiveengineering:material:1>);
+var rodSteel = <ore:rodSteel>;
+rodSteel.add(<immersiveengineering:material:2>);
+var rodAluminum = <ore:rodAluminum>;
+rodAluminum.add(<immersiveengineering:material:3>);
+var rodAluminium = <ore:rodAluminium>;
+rodAluminium.add(<immersiveengineering:material:3>);
+
+
+//Bitumen OreDict Sync
+var crystalCrudeOil = <ore:crystalCrudeOil>;
+crystalCrudeOil.add(<immersivepetroleum:material>);
+
+
+// end reborn workaround
+<ore:ingotTungsten>.remove(<endreborn:item_ingot_wolframium>);
+
+print("Finished 'HCA_Unidict.zs'");
