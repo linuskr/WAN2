@@ -1,6 +1,6 @@
 {
   "name": "moss_pie",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {

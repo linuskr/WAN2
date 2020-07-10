@@ -135,6 +135,9 @@ biomesoplenty:undergarden
 biomesoplenty:visceral_heap
 buildcraftenergy:oil_ocean
 buildcraftenergy:oil_desert
+galacticraftcore:outer space
+galacticraftplanets:outer space 1
+galacticraftplanets:outer space 2
 defiledlands:desert_defiled
 defiledlands:plains_defiled
 defiledlands:forest_tenebra
@@ -166,9 +169,6 @@ traverse:desert_shrubland
 traverse:thicket
 traverse:arid_highland
 traverse:rocky_plains
-galacticraftcore:outer space
-galacticraftplanets:outer space 1
-galacticraftplanets:outer space 2
 fossil:lair of darkness
 fossil:treasure
 iceandfire:glacier

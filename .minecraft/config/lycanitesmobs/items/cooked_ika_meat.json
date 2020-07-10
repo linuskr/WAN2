@@ -1,6 +1,6 @@
 {
   "name": "cooked_ika_meat",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 64,
   "food": {

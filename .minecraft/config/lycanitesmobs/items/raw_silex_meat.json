@@ -1,6 +1,6 @@
 {
   "name": "raw_silex_meat",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 64,
   "food": {
@@ -12,7 +12,7 @@
     "effects": [
       {
         "effectId": "lycanitesmobs:penetration",
-        "duration": 20,
+        "duration": 30,
         "amplifier": 0,
         "chance": 1.0
       }

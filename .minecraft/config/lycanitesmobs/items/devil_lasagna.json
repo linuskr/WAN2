@@ -1,6 +1,6 @@
 {
   "name": "devil_lasagna",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {
@@ -13,7 +13,7 @@
       {
         "effectId": "minecraft:strength",
         "duration": 60,
-        "amplifier": 1,
+        "amplifier": 2,
         "chance": 1.0
       }
     ]

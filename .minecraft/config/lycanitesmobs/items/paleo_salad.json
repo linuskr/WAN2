@@ -1,6 +1,6 @@
 {
   "name": "paleo_salad",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {

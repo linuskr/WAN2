@@ -6,7 +6,7 @@
   ],
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityAsmodeus",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelAsmodeus",
-  "loadDefault": false,
+  "loadDefault": true,
   "enabled": true,
   "spawning": {
     "enabled": true,
@@ -17,7 +17,7 @@
     ],
     "dimensionListType": "whitelist",
     "ignoreBiome": false,
-    "biomes": [
+    "biomeTags": [
       "nether"
     ],
     "spawnWeight": 1,
@@ -38,7 +38,7 @@
   "defense": 2,
   "armor": 0,
   "speed": 32,
-  "damage": 4,
+  "damage": 2,
   "attackSpeed": 1,
   "rangedSpeed": 4,
   "effectDuration": 5,

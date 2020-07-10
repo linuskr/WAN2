@@ -2,7 +2,7 @@
   "name": "tree",
   "type": "spawner",
   "enabled": true,
-  "loadDefault": false,
+  "loadDefault": true,
   "mobCountMin": 1,
   "ignoreDimensions": true,
   "ignoreBiomes": true,
@@ -16,7 +16,7 @@
     {
       "type": "tree",
       "onHarvest": false,
-      "chance": 0.01
+      "chance": 0.02
     }
   ],
   "locations": [
@@ -38,15 +38,7 @@
   "mobSpawns": [
     {
       "mobId": "lycanitesmobs:ent",
-      "weight": 16
-    },
-    {
-      "mobId": "lycanitesmobs:calpod",
-      "weight": 3
-    },
-    {
-      "mobId": "lycanitesmobs:treant",
-      "weight": 1
+      "weight": 8
     }
   ]
 }

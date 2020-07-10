@@ -1,6 +1,6 @@
 {
   "name": "pale_soup",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {

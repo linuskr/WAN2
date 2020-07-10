@@ -6,7 +6,7 @@
   ],
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityConcapedeHead",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelConcapedeHead",
-  "loadDefault": false,
+  "loadDefault": true,
   "enabled": true,
   "spawning": {
     "enabled": true,
@@ -21,7 +21,7 @@
     ],
     "dimensionListType": "blacklist",
     "ignoreBiome": false,
-    "biomes": [
+    "biomeTags": [
       "jungle"
     ],
     "spawnWeight": 1,

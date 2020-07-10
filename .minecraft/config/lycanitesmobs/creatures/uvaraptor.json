@@ -6,7 +6,7 @@
   ],
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityUvaraptor",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelUvaraptor",
-  "loadDefault": false,
+  "loadDefault": true,
   "enabled": true,
   "spawning": {
     "enabled": true,
@@ -21,7 +21,7 @@
     ],
     "dimensionListType": "blacklist",
     "ignoreBiome": false,
-    "biomes": [
+    "biomeTags": [
       "jungle"
     ],
     "spawnWeight": 8,
@@ -41,7 +41,7 @@
   "health": 30,
   "defense": 0,
   "armor": 0,
-  "speed": 36,
+  "speed": 40,
   "damage": 4,
   "attackSpeed": 1,
   "rangedSpeed": 1,

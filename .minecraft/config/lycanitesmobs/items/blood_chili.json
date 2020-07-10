@@ -1,6 +1,6 @@
 {
   "name": "blood_chili",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {

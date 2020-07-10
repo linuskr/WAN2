@@ -8,7 +8,7 @@
   ],
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityKrake",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelKrake",
-  "loadDefault": false,
+  "loadDefault": true,
   "enabled": true,
   "spawning": {
     "enabled": true,
@@ -24,11 +24,11 @@
     ],
     "dimensionListType": "blacklist",
     "ignoreBiome": false,
-    "biomes": [
+    "biomeTags": [
       "river",
       "-snowy"
     ],
-    "spawnWeight": 4,
+    "spawnWeight": 8,
     "dungeonWeight": 0,
     "spawnAreaLimit": 5,
     "spawnGroupMin": 1,

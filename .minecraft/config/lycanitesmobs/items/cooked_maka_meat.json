@@ -1,6 +1,6 @@
 {
   "name": "cooked_maka_meat",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 64,
   "food": {

@@ -1,6 +1,6 @@
 {
   "name": "bulwark_burger",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {
@@ -13,7 +13,7 @@
       {
         "effectId": "minecraft:absorption",
         "duration": 40,
-        "amplifier": 2,
+        "amplifier": 3,
         "chance": 1.0
       }
     ]

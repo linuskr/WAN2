@@ -1,6 +1,6 @@
 {
   "name": "peaks_kebab",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 16,
   "food": {

@@ -285,3 +285,19 @@ key.journeymap.fullscreen.north
 key.journeymap.fullscreen.south
 key.journeymap.fullscreen.east
 key.journeymap.fullscreen.west
+[GC] Galaxy Map
+[GC] Open Spaceship Inventory
+[GC] Toggle Sensor Goggles Mode
+key.findme.search
+Open MPS Keybind GUI
+Go Down (MPS Flight Control)
+Cycle Tool Backward (MPS)
+Cycle Tool Forward (MPS)
+Cosmetic (MPS)
+neat.keybind.toggle
+key.toggleLiquids
+key.toggleVisible
+keybind.fovfixtoggle
+enderio.keybind.fovunreset
+enderio.keybind.fovstore
+enderio.keybind.fovrecall

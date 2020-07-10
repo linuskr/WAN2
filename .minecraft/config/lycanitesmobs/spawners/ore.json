@@ -2,7 +2,7 @@
   "name": "ore",
   "type": "spawner",
   "enabled": true,
-  "loadDefault": false,
+  "loadDefault": true,
   "mobCountMin": 1,
   "ignoreDimensions": true,
   "ignoreBiomes": true,
@@ -18,7 +18,7 @@
       "onHarvest": false,
       "ores": true,
       "gems": false,
-      "chance": 0.01
+      "chance": 0.05
     }
   ],
   "locations": [
@@ -40,11 +40,7 @@
   "mobSpawns": [
     {
       "mobId": "lycanitesmobs:geonach",
-      "weight": 32
-    },
-    {
-      "mobId": "lycanitesmobs:gorgomite",
-      "weight": 1
+      "weight": 8
     }
   ]
 }

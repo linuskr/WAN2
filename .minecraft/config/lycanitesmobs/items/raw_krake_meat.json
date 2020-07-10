@@ -1,6 +1,6 @@
 {
   "name": "raw_krake_meat",
-  "loadDefault": false,
+  "loadDefault": true,
   "group": "items",
   "maxStackSize": 64,
   "food": {

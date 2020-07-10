@@ -6,7 +6,7 @@
   ],
   "entityClass": "com.lycanitesmobs.core.entity.creature.EntityPixen",
   "modelClass": "com.lycanitesmobs.client.model.creature.ModelPixen",
-  "loadDefault": false,
+  "loadDefault": true,
   "enabled": true,
   "spawning": {
     "enabled": true,
@@ -18,10 +18,10 @@
     ],
     "dimensionListType": "blacklist",
     "ignoreBiome": false,
-    "biomes": [
+    "biomeTags": [
       "forest"
     ],
-    "spawnWeight": 4,
+    "spawnWeight": 6,
     "dungeonWeight": 100,
     "spawnAreaLimit": 2,
     "spawnGroupMin": 1,
