@@ -141,6 +141,40 @@ print(" ==================================================== ");
 					"akashictome:definedMod": "xnet"
 				}, 
 				Damage: 0 as short
+			},
+			levelup2: {
+				id: "levelup2:skillbook", 
+				Count: 1 as byte, 
+				tag: {
+					"akashictome:definedMod": "levelup2"
+				}, 
+				Damage: 0 as short
+			}, 
+			theoneprobe: {
+				id: "theoneprobe:probenote", 
+				Count: 1 as byte, 
+				tag: {
+					"akashictome:definedMod": "theoneprobe"
+				}, 
+				Damage: 0 as short
+			},
+			gbook: {
+				id: "gbook:guidebook", 
+				Count: 1 as byte, 
+				tag: {
+					"akashictome:definedMod": "gbook", 
+					Book: "gbook:xml/guidebook.xml"
+				}, 
+				Damage: 0 as short
+			}, 
+			gbook1: {
+				id: "gbook:guidebook", 
+				Count: 1 as byte, 
+				tag: {
+					"akashictome:definedMod": "gbook1", 
+					Book: "minecolonies:book/minecolonies.xml"
+				}, 
+				Damage: 0 as short
 			}
 		}
 	}
@@ -176,6 +210,9 @@ print(" ==================================================== ");
 		<fossil:dinopedia>,
 		<buildcraftlib:guide>,
 		<patchouli:guide_book>,
+		<levelup2:skillbook>,
+		<theoneprobe:probenote>,
+		<gbook:guidebook>,
 		] as IItemStack[];
 
 	for itemBook in addedBooks {
