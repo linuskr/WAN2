@@ -43,3 +43,5 @@
 /.minecraft/servers.dat
 /.minecraft/usercache.json
 /.minecraft/usernamecache.json
+/.minecraft/mods/probe-0.1.24.jar
+/.minecraft/config/Probe.cfg
