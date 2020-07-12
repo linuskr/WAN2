@@ -134,14 +134,6 @@ print(" ==================================================== ");
 				}, 
 				Damage: 0 as short
 			}, 
-			cookingforblockheads: {
-				id: "cookingforblockheads:recipe_book", 
-				Count: 1 as byte, 
-				tag: {
-					"akashictome:definedMod": "cookingforblockheads"
-				}, 
-				Damage: 1 as short
-			}, 
 			xnet: {
 				id: "xnet:xnet_manual", 
 				Count: 1 as byte, 
@@ -158,8 +150,7 @@ print(" ==================================================== ");
 
 	//metadata to item
 	completeTome.addTooltip(format.aqua("Contains all basic mod manuals/guides already included"));
-	mods.jei.JEI.addDescription(completeTome, "The Akashic tome is a book for your books...",
-											  "This recipe of 1 dirt = full book is added by All The Mods to ALREADY contain most/all modded manuals as a convenience for our players");
+	mods.jei.JEI.addDescription(completeTome, "The Akashic tome is a book for your books...");
 
 	//add the full book to JEI as it's own entry
 	mods.jei.JEI.addItem(completeTome);
@@ -176,11 +167,15 @@ print(" ==================================================== ");
 		<immersiveengineering:tool:3>, 
 		<rftools:rftools_manual>, 
 		<opencomputers:tool:4>, 
-		<cookingforblockheads:recipe_book:1>, 
 		<xnet:xnet_manual>, 
 		<rftoolsdim:rftoolsdim_manual>, 
 		<rftools:rftools_shape_manual>, 
 		<conarm:book>,
+		<tis3d:book_manual>,
+		<guideapi:notreepunching-guide_book>,
+		<fossil:dinopedia>,
+		<buildcraftlib:guide>,
+		<patchouli:guide_book>,
 		] as IItemStack[];
 
 	for itemBook in addedBooks {

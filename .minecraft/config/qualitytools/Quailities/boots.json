@@ -10,12 +10,7 @@
       }
     ],
     "blacklist": [
-      {
-        "item": "toughasnails:wool_boots"
-      },
-      {
-        "item": "toughasnails:jelled_slime_boots"
-      }
+    	
     ],
     "qualities": [
       {
