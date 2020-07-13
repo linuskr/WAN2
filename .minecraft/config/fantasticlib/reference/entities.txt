@@ -123,13 +123,6 @@ quark:frog
 quark:pirate
 quark:crab
 quark:wraith
-quark:gravisand
-quark:seat
-quark:chest_passenger
-quark:flat_item_frame
-quark:leash_knot
-quark:colored_item_frame
-quark:glass_item_frame
 quark:pickarang
 quark:arrow_ender
 quark:arrow_explosive
@@ -137,6 +130,13 @@ quark:arrow_torch
 quark:dragon_breath_bottle
 quark:soul_powder
 quark:parrot_egg
+quark:seat
+quark:chest_passenger
+quark:gravisand
+quark:flat_item_frame
+quark:leash_knot
+quark:colored_item_frame
+quark:glass_item_frame
 psi:spell_projectile
 psi:spell_circle
 psi:spell_grenade
@@ -295,8 +295,8 @@ securitycraft:securitycamera
 securitycraft:sentry
 securitycraft:bullet
 enderio:owl_egg
-enderio:falling_machine
 enderio:primed_charge
+enderio:falling_machine
 tconstruct:blueslime
 tconstruct:indestructible
 tconstruct:arrow
