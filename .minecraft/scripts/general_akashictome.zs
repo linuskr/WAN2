@@ -191,8 +191,8 @@ print(" ==================================================== ");
 
 	//1 dirt = book
 	recipes.addShapeless(completeTome, [<minecraft:dirt>]);
-	
-	mods.initialinventory.InvHandler.addStartingItem("akashictome", completeTome);
+
+	mods.initialinventory.InvHandler.addStartingItem(completeTome as IItemStack);
 
 //====== Tooltip for added books ======
 //
