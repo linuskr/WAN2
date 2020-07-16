@@ -1,0 +1,24 @@
+{
+  "config_version": {
+    "id": "__default",
+    "version": 0
+  },
+  "dimensions": [
+    {
+      "dim": 6,
+      "dimensiontype": {
+        "id": 6,
+        "name": "Hex Lands",
+        "suffix": "_dim6",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "bophex",
+        "GameRules": {
+          "RandomSeet": "564464846374180"
+        }
+      }
+    }
+  ]
+}

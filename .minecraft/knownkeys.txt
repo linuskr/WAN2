@@ -301,3 +301,4 @@ keybind.fovfixtoggle
 enderio.keybind.fovunreset
 enderio.keybind.fovstore
 enderio.keybind.fovrecall
+key.cofh.multimode
