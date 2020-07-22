@@ -16,7 +16,194 @@
       "worldinfo_onetime": {
         "generatorName": "bophex",
         "GameRules": {
-          "RandomSeet": "564464846374180"
+          "RandomSeet": "5644648463fdghdfhg80"
+        }
+      }
+    },
+    {
+      "dim": 112,
+      "dimensiontype": {
+        "id": 112,
+        "name": "Lost Cities (cavern)",
+        "suffix": "_dim112",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"cavern\"}",
+        "GameRules": {
+          "RandomSeet": "5644665eufgdhgf"
+        }
+      }
+    },
+    {
+      "dim": 113,
+      "dimensiontype": {
+        "id": 113,
+        "name": "Lost Cities (rarecities)",
+        "suffix": "_dim1",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"rarecities\"}",
+        "GameRules": {
+          "RandomSeet": "5a3wt4yehstd80"
+        }
+      }
+    },
+    {
+      "dim": 114,
+      "dimensiontype": {
+        "id": 114,
+        "name": "Lost Cities (floating)",
+        "suffix": "_dim114",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"floating\"}",
+        "GameRules": {
+          "RandomSeet": "dsfag5hzfthg74180"
+        }
+      }
+    },
+    {
+      "dim": 115,
+      "dimensiontype": {
+        "id": 115,
+        "name": "Lost Cities (space)",
+        "suffix": "_dim115",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"space\"}",
+        "GameRules": {
+          "RandomSeet": "5htrdsrbzrs"
+        }
+      }
+    },
+    {
+      "dim": 116,
+      "dimensiontype": {
+        "id": 116,
+        "name": "Lost Cities (waterbubbles)",
+        "suffix": "_dim116",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"waterbubbles\"}",
+        "GameRules": {
+          "RandomSeet": "edsgrsrtzbfvt5e"
+        }
+      }
+    },
+    {
+      "dim": 117,
+      "dimensiontype": {
+        "id": 117,
+        "name": "Lost Cities (biosphere)",
+        "suffix": "_dim117",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"biosphere\"}",
+        "GameRules": {
+          "RandomSeet": "35zhgtdshg5z5546ujws4682"
+        }
+      }
+    },
+    {
+      "dim": 118,
+      "dimensiontype": {
+        "id": 118,
+        "name": "Lost Cities (tallbuildings)",
+        "suffix": "_dim118",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"tallbuildings\"}",
+        "GameRules": {
+          "RandomSeet": "453qhzhgnbfs6t54w"
+        }
+      }
+    },
+    {
+      "dim": 119,
+      "dimensiontype": {
+        "id": 119,
+        "name": "Lost Cities (ancient)",
+        "suffix": "_dim119",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"ancient\"}",
+        "GameRules": {
+          "RandomSeet": "3qgb45w7365dfz65ihdfgP"
+        }
+      }
+    },
+    {
+      "dim": 120,
+      "dimensiontype": {
+        "id": 120,
+        "name": "Lost Cities (wasteland)",
+        "suffix": "_dim120",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"wasteland\"}",
+        "GameRules": {
+          "RandomSeet": "465uzfdujt7deJNHZGFD&%$W"
+        }
+      }
+    },
+    {
+      "dim": 121,
+      "dimensiontype": {
+        "id": 121,
+        "name": "Lost Cities (atlantis)",
+        "suffix": "_dim121",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"atlantis\"}",
+        "GameRules": {
+          "RandomSeet": "ikuzdti7efsdz54e54ee"
+        }
+      }
+    },
+    {
+      "dim": 122,
+      "dimensiontype": {
+        "id": 122,
+        "name": "Lost Cities (realistic)",
+        "suffix": "_dim122",
+        "keeploaded": false,
+        "worldprovider": "WorldProviderSurfaceJED"
+      },
+      "worldinfo_onetime": {
+        "generatorName": "lostcities_bop",
+        "generatorOptions": "{\"profile\":\"realistic\"}",
+        "GameRules": {
+          "RandomSeet": "5ertzhgdj4180"
         }
       }
     }
