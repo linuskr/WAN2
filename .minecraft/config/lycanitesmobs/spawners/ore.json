@@ -16,9 +16,11 @@
     {
       "type": "ore",
       "onHarvest": false,
+      "onPlace": false,
       "ores": true,
       "gems": false,
-      "chance": 0.05
+      "chance": 0.005,
+      "fortuneMax": 0,
     }
   ],
   "locations": [
