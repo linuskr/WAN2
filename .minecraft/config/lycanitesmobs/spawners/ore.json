@@ -2,7 +2,7 @@
   "name": "ore",
   "type": "spawner",
   "enabled": true,
-  "loadDefault": true,
+  "loadDefault": false,
   "mobCountMin": 1,
   "ignoreDimensions": true,
   "ignoreBiomes": true,
@@ -10,7 +10,7 @@
   "ignoreLightLevel": true,
   "ignoreGroupLimit": true,
   "ignoreForgeCanSpawnEvent": true,
-  "blockBreakRadius": 1,
+  "blockBreakRadius": 0,
   "conditions": [],
   "triggers": [
     {
