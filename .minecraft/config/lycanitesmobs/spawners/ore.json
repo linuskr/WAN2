@@ -2,7 +2,7 @@
   "name": "ore",
   "type": "spawner",
   "enabled": true,
-  "loadDefault": false,
+  "loadDefault": true,
   "mobCountMin": 1,
   "ignoreDimensions": true,
   "ignoreBiomes": true,
@@ -10,17 +10,15 @@
   "ignoreLightLevel": true,
   "ignoreGroupLimit": true,
   "ignoreForgeCanSpawnEvent": true,
-  "blockBreakRadius": 0,
+  "blockBreakRadius": 1,
   "conditions": [],
   "triggers": [
     {
       "type": "ore",
       "onHarvest": false,
-      "onPlace": false,
       "ores": true,
       "gems": false,
-      "chance": 0.005,
-      "fortuneMax": 0,
+      "chance": 0.05
     }
   ],
   "locations": [
