@@ -122,5 +122,37 @@
     "material": {
         "ore_dict": "gemEmerald"
     }
+  },
+  {
+    "tool": {
+        "item": "conarm:helmet"
+    },
+    "material": {
+        "ore_dict": "gemDiamond"
+    }
+  },
+  {
+    "tool": {
+        "item": "conarm:chestplate"
+    },
+    "material": {
+        "ore_dict": "gemDiamond"
+    }
+  },
+  {
+    "tool": {
+        "item": "conarm:leggings"
+    },
+    "material": {
+        "ore_dict": "gemDiamond"
+    }
+  },
+  {
+    "tool": {
+        "item": "conarm:boots"
+    },
+    "material": {
+        "ore_dict": "gemDiamond"
+    }
   }
 ]
