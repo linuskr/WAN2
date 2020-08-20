@@ -175,6 +175,15 @@ print(" ==================================================== ");
 					Book: "minecolonies:book/minecolonies.xml"
 				}, 
 				Damage: 0 as short
+			},
+			nuclearcraft: {
+				id: "patchouli:guide_book", 
+				Count: 1 as byte, 
+				tag: {
+					"akashictome:definedMod": "nuclearcraft", 
+					"patchouli:book": "nuclearcraft:guide"
+					}, 
+				Damage: 0 as short
 			}
 		}
 	}
