@@ -36,20 +36,37 @@ for i,array in IsoNames{
 }
 
 // fuels generation
-var FuelNames= ["californium_fuel","californium_fuel_carbide","californium_fuel_triso","californium_fuel_oxide","californium_fuel_nitride","californium_fuel_zirconium","einsteinium_fuel","einsteinium_fuel_carbide","einsteinium_fuel_triso","einsteinium_fuel_oxide","einsteinium_fuel_nitride","einsteinium_fuel_zirconium","fermium_fuel","fermium_fuel_carbide","fermium_fuel_triso","fermium_fuel_oxide","fermium_fuel_nitride","fermium_fuel_zirconium","hcalifornium_fuel","hcalifornium_fuel_carbide","hcalifornium_fuel_triso","hcalifornium_fuel_oxide","hcalifornium_fuel_nitride","hcalifornium_fuel_zirconium","heinsteinium_fuel","heinsteinium_fuel_carbide","heinsteinium_fuel_triso","heinsteinium_fuel_oxide","heinsteinium_fuel_nitride","heinsteinium_fuel_zirconium"] as string[];
+var FuelNames= ["californium_fuel","californium_fuel_carbide","californium_fuel_triso","californium_fuel_oxide","californium_fuel_nitride","californium_fuel_zirconium","einsteinium_fuel","einsteinium_fuel_carbide","einsteinium_fuel_triso","einsteinium_fuel_oxide","einsteinium_fuel_nitride","einsteinium_fuel_zirconium","fermium_fuel","fermium_fuel_carbide","fermium_fuel_triso","fermium_fuel_oxide","fermium_fuel_nitride","fermium_fuel_zirconium","hcalifornium_fuel","hcalifornium_fuel_carbide","hcalifornium_fuel_triso","hcalifornium_fuel_oxide","hcalifornium_fuel_nitride","hcalifornium_fuel_zirconium","heinsteinium_fuel","heinsteinium_fuel_carbide","heinsteinium_fuel_triso","heinsteinium_fuel_oxide","heinsteinium_fuel_nitride","heinsteinium_fuel_zirconium","rplutonium_fuel","rplutonium_fuel_carbide","rplutonium_fuel_triso","rplutonium_fuel_oxide","rplutonium_fuel_nitride","rplutonium_fuel_zirconium","ramericium_fuel","ramericium_fuel_carbide","ramericium_fuel_triso","ramericium_fuel_oxide","ramericium_fuel_nitride","ramericium_fuel_zirconium","rcalifornium_fuel","rcalifornium_fuel_carbide","rcalifornium_fuel_triso","rcalifornium_fuel_oxide","rcalifornium_fuel_nitride","rcalifornium_fuel_zirconium"] as string[];
 for item in FuelNames{
 	var temp = VanillaFactory.createItem(item);
 	temp.creativeTab = <creativetab:misc>;
 	temp.register();	
 }
 
-FuelNames=["dcalifornium_fuel_triso","dcalifornium_fuel_oxide","dcalifornium_fuel_nitride","dcalifornium_fuel_zirconium","deinsteinium_fuel_triso","deinsteinium_fuel_oxide","deinsteinium_fuel_nitride","deinsteinium_fuel_zirconium","dfermium_fuel_triso","dfermium_fuel_oxide","dfermium_fuel_nitride","dfermium_fuel_zirconium","dhcalifornium_fuel_triso","dhcalifornium_fuel_oxide","dhcalifornium_fuel_nitride","dhcalifornium_fuel_zirconium","dheinsteinium_fuel_triso","dheinsteinium_fuel_oxide","dheinsteinium_fuel_nitride","dheinsteinium_fuel_zirconium"];
+FuelNames=["dcalifornium_fuel_triso","dcalifornium_fuel_oxide","dcalifornium_fuel_nitride","dcalifornium_fuel_zirconium","deinsteinium_fuel_triso","deinsteinium_fuel_oxide","deinsteinium_fuel_nitride","deinsteinium_fuel_zirconium","dfermium_fuel_triso","dfermium_fuel_oxide","dfermium_fuel_nitride","dfermium_fuel_zirconium","dhcalifornium_fuel_triso","dhcalifornium_fuel_oxide","dhcalifornium_fuel_nitride","dhcalifornium_fuel_zirconium","dheinsteinium_fuel_triso","dheinsteinium_fuel_oxide","dheinsteinium_fuel_nitride","dheinsteinium_fuel_zirconium","drplutonium_fuel_triso","drplutonium_fuel_oxide","drplutonium_fuel_nitride","drplutonium_fuel_zirconium","dramericium_fuel_triso","dramericium_fuel_oxide","dramericium_fuel_nitride","dramericium_fuel_zirconium","drcalifornium_fuel_triso","drcalifornium_fuel_oxide","drcalifornium_fuel_nitride","drcalifornium_fuel_zirconium"];
 for item in FuelNames{
 	var temp = VanillaFactory.createItem(item);
 	temp.creativeTab = <creativetab:misc>;
 	temp.register();	
 }
 
+//RTG stuff
+val itemNames=["gemgermanium","si_ge"] as string[];
+for item in itemNames{
+	var temp = VanillaFactory.createItem(item);
+	temp.creativeTab = <creativetab:misc>;
+	temp.register();	
+}
+var rtgNames = ["rtg_po","rtg_po_done","rtg_ra","rtg_ra_done","rtg_pu","rtg_pu_done","rtg_am","rtg_am_done","rtg_cf","rtg_cf_done"] as string[];
+for item in rtgNames{
+	var zsBlock = VanillaFactory.createBlock(item, <blockmaterial:rock>);
+	zsBlock.setBlockHardness(2.0);
+	zsBlock.setBlockResistance(5.0);
+	zsBlock.setToolClass("pickaxe");
+	zsBlock.setToolLevel(0);
+	zsBlock.setBlockSoundType(<soundtype:stone>);
+	zsBlock.register();
+}
 
 //special QMD additions
 if(loadedMods has "qmd"){
@@ -76,4 +93,16 @@ if(loadedMods has "qmd"){
 	var temp = VanillaFactory.createItem("mysterymix");
 	temp.creativeTab = <creativetab:misc>;
 	temp.register();
+
+rtgNames = ["rtg_co","rtg_co_done","rtg_sr","rtg_sr_done","rtg_pm","rtg_pm_done"];
+for item in rtgNames{
+	var zsBlock = VanillaFactory.createBlock(item, <blockmaterial:rock>);
+	zsBlock.setBlockHardness(2.0);
+	zsBlock.setBlockResistance(5.0);
+	zsBlock.setToolClass("pickaxe");
+	zsBlock.setToolLevel(0);
+	zsBlock.setBlockSoundType(<soundtype:stone>);
+	zsBlock.register();
+}
+
 }

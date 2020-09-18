@@ -11,4 +11,5 @@ this code. Also, you may not sell this code.)
 
 
 #loader preinit
+#modloaded qmd
 mods.qmd.particle.addParticle("heffalumpMatter", "heffalump.png", 3819.13, 1.0, 0.0);

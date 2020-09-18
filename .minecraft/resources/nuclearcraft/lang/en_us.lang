@@ -135,6 +135,58 @@ item.contenttweaker.mysterymix.name=Mysterious Mixture
 qmd.particle.heffalumpMatter.name=Heffalump Particle
 qmd.particle.heffalumpMatter.desc=Heffalumps and Woozles are very confuzles
 
+item.contenttweaker.rplutonium_fuel.name=REP-238
+item.contenttweaker.rplutonium_fuel_carbide.name=REP-238 Carbide
+item.contenttweaker.rplutonium_fuel_triso.name=REP-238 TRISO Fuel Pebble
+item.contenttweaker.rplutonium_fuel_oxide.name=REP-238 Oxide Fuel Pellet
+item.contenttweaker.rplutonium_fuel_nitride.name=REP-238 Nitride Fuel Pellet
+item.contenttweaker.rplutonium_fuel_zirconium.name=REP-238 Zirconium Alloy Fuel Pellet
+item.contenttweaker.ramericium_fuel.name=REA-241
+item.contenttweaker.ramericium_fuel_carbide.name=REA-241 Carbide
+item.contenttweaker.ramericium_fuel_triso.name=REA-241 TRISO Fuel Pebble
+item.contenttweaker.ramericium_fuel_oxide.name=REA-241 Oxide Fuel Pellet
+item.contenttweaker.ramericium_fuel_nitride.name=REA-241 Nitride Fuel Pellet
+item.contenttweaker.ramericium_fuel_zirconium.name=REA-241 Zirconium Alloy Fuel Pellet
+item.contenttweaker.rcalifornium_fuel.name=RECf-250
+item.contenttweaker.rcalifornium_fuel_carbide.name=RECf-250 Carbide
+item.contenttweaker.rcalifornium_fuel_triso.name=RECf-250 TRISO Fuel Pebble
+item.contenttweaker.rcalifornium_fuel_oxide.name=RECf-250 Oxide Fuel Pellet
+item.contenttweaker.rcalifornium_fuel_nitride.name=RECf-250 Nitride Fuel Pellet
+item.contenttweaker.rcalifornium_fuel_zirconium.name=RECf-250 Zirconium Alloy Fuel Pellet
+
+item.contenttweaker.drplutonium_fuel_triso.name=Depleted REP-238 TRISO Fuel Pebble
+item.contenttweaker.drplutonium_fuel_oxide.name=Depleted REP-238 Oxide Fuel Pellet
+item.contenttweaker.drplutonium_fuel_nitride.name=Depleted REP-238 Nitride Fuel Pellet
+item.contenttweaker.drplutonium_fuel_zirconium.name=Depleted REP-238 Zirconium Alloy Fuel Pellet
+item.contenttweaker.dramericium_fuel_triso.name=Depleted REA-241 TRISO Fuel Pebble
+item.contenttweaker.dramericium_fuel_oxide.name=Depleted REA-241 Oxide Fuel Pellet
+item.contenttweaker.dramericium_fuel_nitride.name=Depleted REA-241 Nitride Fuel Pellet
+item.contenttweaker.dramericium_fuel_zirconium.name=Depleted REA-241 Zirconium Alloy Fuel Pellet
+item.contenttweaker.drcalifornium_fuel_triso.name=Depleted RECf-250 TRISO Fuel Pebble
+item.contenttweaker.drcalifornium_fuel_oxide.name=Depleted RECf-250 Oxide Fuel Pellet
+item.contenttweaker.drcalifornium_fuel_nitride.name=Depleted RECf-250 Nitride Fuel Pellet
+item.contenttweaker.drcalifornium_fuel_zirconium.name=Depleted RECf-250 Zirconium Alloy Fuel Pellet
+
+tile.contenttweaker.rtg_po.name=Polonium-210 Radioisotopic Unit
+tile.contenttweaker.rtg_po_done.name=Depleted Polonium-210 Radioisotopic Unit
+tile.contenttweaker.rtg_ra.name=Radium-226 Radioisotopic Unit
+tile.contenttweaker.rtg_ra_done.name=Depleted Radium-226 Radioisotopic Unit
+tile.contenttweaker.rtg_pu.name=Plutonium-238 Radioisotopic Unit
+tile.contenttweaker.rtg_pu_done.name=Depleted Plutonium-238 Radioisotopic Unit
+tile.contenttweaker.rtg_am.name=Americium-241 Radioisotopic Unit
+tile.contenttweaker.rtg_am_done.name=Depleted Americium-241 Radioisotopic Unit
+tile.contenttweaker.rtg_cf.name=Californium-250 Radioisotopic Unit
+tile.contenttweaker.rtg_cf_done.name=Depleted Californium-250 Radioisotopic Unit
+
+tile.contenttweaker.rtg_co.name=Cobalt-60 Radioisotopic Unit
+tile.contenttweaker.rtg_co_done.name=Depleted Cobalt-60 Radioisotopic Unit
+tile.contenttweaker.rtg_sr.name=Strontium-90 Radioisotopic Unit
+tile.contenttweaker.rtg_sr_done.name=Depleted Strontium-90 Radioisotopic Unit
+tile.contenttweaker.rtg_pm.name=Promethium-147 Radioisotopic Unit
+tile.contenttweaker.rtg_pm_done.name=Depleted Promethium-147 Radioisotopic Unit
+
+item.contenttweaker.gemgermanium.name=Germanium
+item.contenttweaker.si_ge.name=Silicon-Germanium
 
 # MoarHeatSinks
 
@@ -193,6 +245,28 @@ nc.sf.liquid_oxygen_sink0=%s liquid oxygen heat sink
 nc.sf.liquid_oxygen_sink1=%s liquid oxygen heat sinks
 nc.sf.corium_sink0=%s corium heat sink
 nc.sf.corium_sink1=%s corium heat sinks
+
+# MoarReactorFunctionality
+
+item.contenttweaker.blaster.name=Small Compression Charge
+item.contenttweaker.compressed_air_canister.name=Can of Compressed Air
+fluid.liquid_air=Liquified Air
+fluid.well_pressed_water=Well Pressurized Water
+fluid.super_critical_steam=Supercritical Steam
+fluid.crap_steam=Crap Steam
+fluid.hot_nitrogen=Hot Nitrogen
+fluid.hot_carbon_dioxide=Hot Carbon Dioxide
+fluid.hot_helium=Hot Helium
+fluid.hot_argon=Hot Argon
+fluid.krypton=Krypton
+fluid.hot_krypton=Hot Krypton
+fluid.xenon=Xenon
+fluid.hot_xenon=Hot Xenon
+fluid.hot_neon=Hot Neon
+fluid.compr_carbon_dioxide=Compressed Carbon Dioxide
+fluid.supercritical_carbon_dioxide=Supercritical Carbon Dioxide
+fluid.critical_exhaust_carbon_dioxide=Critical Exhaust Carbon Dioxide
+
 
 # NCEIB-Overhaul
 

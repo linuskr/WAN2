@@ -22,6 +22,7 @@ import mods.nuclearcraft.FuelReprocessor;
 /* import mods.nuclearcraft.FissionIrradiator; */
 import mods.nuclearcraft.PebbleFission;
 import mods.nuclearcraft.SolidFission;
+import mods.nuclearcraft.RockCrusher;
 
 
 // this is a separate/extra multiplier beyond NC's base multiplier
@@ -254,38 +255,35 @@ for i,array in dFuels{
 }
 
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- REF Fuels -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+fis = [[<ore:ingotPlutonium239>,<nuclearcraft:plutonium:6>,<ore:ingotPlutonium239Oxide>,<ore:ingotPlutonium239Nitride>,<nuclearcraft:plutonium:9>],[<ore:ingotAmericium242>,<nuclearcraft:americium:6>,<ore:ingotAmericium242Oxide>,<ore:ingotAmericium242Nitride>,<nuclearcraft:americium:9>],[<ore:ingotCalifornium249>,<nuclearcraft:californium:1>,<ore:ingotCalifornium249Oxide>,<ore:ingotCalifornium249Nitride>,<nuclearcraft:californium:4>]] as IIngredient[][];
+fer = [[<ore:ingotPlutonium242>,<nuclearcraft:plutonium:16>,<ore:ingotPlutonium242Oxide>,<ore:ingotPlutonium242Nitride>,<nuclearcraft:plutonium:19>],[<ore:ingotAmericium243>,<nuclearcraft:americium:11>,<ore:ingotAmericium243Oxide>,<ore:ingotAmericium243Nitride>,<nuclearcraft:americium:14>],[<ore:ingotCalifornium252>,<nuclearcraft:californium:16>,<ore:ingotCalifornium252Oxide>,<ore:ingotCalifornium252Nitride>,<nuclearcraft:californium:19>]] as IIngredient[][];
+var rad = [[<ore:ingotPlutonium238>,<nuclearcraft:plutonium:1>,<ore:ingotPlutonium238Oxide>,<ore:ingotPlutonium238Nitride>,<nuclearcraft:plutonium:4>],[<ore:ingotAmericium241>,<nuclearcraft:americium:1>,<ore:ingotAmericium241Oxide>,<ore:ingotAmericium241Nitride>,<nuclearcraft:americium:4>],[<ore:ingotCalifornium250>,<nuclearcraft:californium:6>,<ore:ingotCalifornium250Oxide>,<ore:ingotCalifornium250Nitride>,<nuclearcraft:californium:9>]] as IIngredient[][];
 
+allFuels = [[<contenttweaker:rplutonium_fuel>,<contenttweaker:rplutonium_fuel_carbide>,<contenttweaker:rplutonium_fuel_oxide>,<contenttweaker:rplutonium_fuel_nitride>,<contenttweaker:rplutonium_fuel_zirconium>],[<contenttweaker:ramericium_fuel>,<contenttweaker:ramericium_fuel_carbide>,<contenttweaker:ramericium_fuel_oxide>,<contenttweaker:ramericium_fuel_nitride>,<contenttweaker:ramericium_fuel_zirconium>],[<contenttweaker:rcalifornium_fuel>,<contenttweaker:rcalifornium_fuel_carbide>,<contenttweaker:rcalifornium_fuel_oxide>,<contenttweaker:rcalifornium_fuel_nitride>,<contenttweaker:rcalifornium_fuel_zirconium>]];
+fuelN2 = [<contenttweaker:rplutonium_fuel>,<contenttweaker:ramericium_fuel>,<contenttweaker:rcalifornium_fuel>];
 
-
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- QMD Fuels -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-if(loadedMods has "qmd"){
-
-
-/* -=-=-=-=- MIX Fuels -=-=-=-=-*/
-
-fis = [[<contenttweaker:mendelevium58>,<contenttweaker:mendelevium58carbide>,<contenttweaker:mendelevium58oxide>,<contenttweaker:mendelevium58nitride>,<contenttweaker:mendelevium58zirconium>],[<contenttweaker:flerovium98>,<contenttweaker:flerovium98carbide>,<contenttweaker:flerovium98oxide>,<contenttweaker:flerovium98nitride>,<contenttweaker:flerovium98zirconium>]] as IIngredient[][];
-fer = [[<ore:ingotCalifornium252>,<nuclearcraft:californium:16>,<ore:ingotCalifornium252Oxide>,<ore:ingotCalifornium252Nitride>,<nuclearcraft:californium:19>],[<ore:ingotCalifornium252>,<nuclearcraft:californium:16>,<ore:ingotCalifornium252Oxide>,<ore:ingotCalifornium252Nitride>,<nuclearcraft:californium:19>]] as IIngredient[][];
-decayRad = [1.12,0.336,3.70e-6,1.04e-5] as double[];
-
-var FuelNames = [["mendelevium_fuel","mendelevium_fuel_carbide","mendelevium_fuel_oxide","mendelevium_fuel_nitride","mendelevium_fuel_zirconium"],["flerovium_fuel","flerovium_fuel_carbide","flerovium_fuel_triso","flerovium_fuel_oxide","flerovium_fuel_nitride","flerovium_fuel_zirconium"]] as string[][];
-var allFuels = [[<contenttweaker:mendelevium_fuel>,<contenttweaker:mendelevium_fuel_carbide>,<contenttweaker:mendelevium_fuel_oxide>,<contenttweaker:mendelevium_fuel_nitride>,<contenttweaker:mendelevium_fuel_zirconium>],[<contenttweaker:flerovium_fuel>,<contenttweaker:flerovium_fuel_carbide>,<contenttweaker:flerovium_fuel_oxide>,<contenttweaker:flerovium_fuel_nitride>,<contenttweaker:flerovium_fuel_zirconium>]] as IItemStack[][];
-var fuelN2 = [<contenttweaker:californium_fuel>,<contenttweaker:flerovium_fuel>] as IItemStack[];
+trisoFuels = [<contenttweaker:rplutonium_fuel_triso>,<contenttweaker:ramericium_fuel_triso>,<contenttweaker:rcalifornium_fuel_triso>];
+dFuels = [[<contenttweaker:drplutonium_fuel_triso>,<contenttweaker:drplutonium_fuel_oxide>,<contenttweaker:drplutonium_fuel_nitride>,<contenttweaker:drplutonium_fuel_zirconium>],[<contenttweaker:dramericium_fuel_triso>,<contenttweaker:dramericium_fuel_oxide>,<contenttweaker:dramericium_fuel_nitride>,<contenttweaker:dramericium_fuel_zirconium>],[<contenttweaker:drcalifornium_fuel_triso>,<contenttweaker:drcalifornium_fuel_oxide>,<contenttweaker:drcalifornium_fuel_nitride>,<contenttweaker:drcalifornium_fuel_zirconium>]];
 
 // time, heat, criticality
-fuelStats = [[[lifetimeMultiplier*1200,3389,21],[lifetimeMultiplier*768,5295,14]],[[lifetimeMultiplier*7100,1696,60],[lifetimeMultiplier*4544,2650,41]]] as int[][][];
-fuelCrits = [[17],[48]] as int[][];
+fuelStats = [[[lifetimeMultiplier*250*20,346,53],[lifetimeMultiplier*160*20,540,42]],[[lifetimeMultiplier*100*20,864,43],[lifetimeMultiplier*64*20,1350,34]],[[lifetimeMultiplier*2805,616,63],[lifetimeMultiplier*1795,963,50]]] as int[][][];
+val primer=[false,false,true] as bool[];
 
-var trisoFuels = [<contenttweaker:mendelevium_fuel_triso>,<contenttweaker:flerovium_fuel_triso>] as IItemStack[];
-var dFuels = [[<contenttweaker:dmendelevium_fuel_triso>,<contenttweaker:dmendelevium_fuel_oxide>,<contenttweaker:dmendelevium_fuel_nitride>,<contenttweaker:dmendelevium_fuel_zirconium>],[<contenttweaker:dflerovium_fuel_triso>,<contenttweaker:dflerovium_fuel_oxide>,<contenttweaker:dflerovium_fuel_nitride>,<contenttweaker:dflerovium_fuel_zirconium>]] as IIngredient[][];
 // time, heat, criticality
-trisoStats = [[lifetimeMultiplier*960,4236,14],[lifetimeMultiplier*5680,2120,51]] as int[][];
+trisoStats = [[lifetimeMultiplier*200*20,432,36],[lifetimeMultiplier*80*20,1080,29],[lifetimeMultiplier*2244,770,43]] as int[][];
+
 // efficiency, radiation
-trisoStatsAlt = [[2.15,0.00233],[3.3,0.00110]] as double[][];
+trisoStatsAlt = [[1.35,5.61e-4],[1.45,5.62e-4],[1.90,4.35e-2]] as double[][];
+
+
+decayRad =[1.28e-3,1.92e-3,0.261] as double[];
+ddecayRad =[1.61e-3,1.04e-3,2.49] as double[];
+
 for i,array in allFuels{
 	for j,item in array{
 		//crafting
-		recipes.addShapeless(FuelNames[i][j],item * 9,[fis[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j]]);
+		recipes.addShapeless(item  * 9,[rad[i][j], fis[i][j], fis[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j], fer[i][j]]);
 		mods.nuclearcraft.Radiation.setRadiationLevel(item, decayRad[i]);
 	}
 	//non-crafting recipes
@@ -297,141 +295,56 @@ for i,array in allFuels{
 	furnace.addRecipe(fuelN2[i], array[2]);
 	mods.nuclearcraft.Separator.addRecipe(array[1], array[0], <nuclearcraft:dust:8>);
 	mods.nuclearcraft.Separator.addRecipe(array[4], array[0], <nuclearcraft:dust:10>);
-	mods.nuclearcraft.Separator.addRecipe(array[0]*9, fis[i][0], fer[i][0]*8);
+	mods.nuclearcraft.Separator.addRecipe(array[0]*9, fis[i][0]*3, fer[i][0]*6);
 	//pebbles
 	mods.nuclearcraft.Assembler.addRecipe(array[1]*9, <ore:dustGraphite>, <nuclearcraft:part:15>, <nuclearcraft:alloy:13>, trisoFuels[i]*9);
-	mods.nuclearcraft.PebbleFission.addRecipe(trisoFuels[i], dFuels[i][0], trisoStats[i][0], trisoStats[i][1], trisoStatsAlt[i][0], trisoStats[i][2], true, trisoStatsAlt[i][1]);
+	mods.nuclearcraft.PebbleFission.addRecipe(trisoFuels[i], dFuels[i][0], trisoStats[i][0], trisoStats[i][1], trisoStatsAlt[i][0], trisoStats[i][2], primer[i], trisoStatsAlt[i][1]);
 	mods.nuclearcraft.Radiation.setRadiationLevel(trisoFuels[i], decayRad[i]);
 	//oxide
-	mods.nuclearcraft.SolidFission.addRecipe(array[2], dFuels[i][1], trisoStats[i][0], trisoStats[i][1], trisoStatsAlt[i][0], fuelCrits[i][0], true, trisoStatsAlt[i][1]);
+	mods.nuclearcraft.SolidFission.addRecipe(array[2], dFuels[i][1], trisoStats[i][0], trisoStats[i][1], trisoStatsAlt[i][0], fuelStats[i][1][2], primer[i], trisoStatsAlt[i][1]);
 	//nitride
-	mods.nuclearcraft.SolidFission.addRecipe(array[3], dFuels[i][2], fuelStats[i][0][0], fuelStats[i][0][1], trisoStatsAlt[i][0], fuelStats[i][0][2], true, trisoStatsAlt[i][1]);
+	mods.nuclearcraft.SolidFission.addRecipe(array[3], dFuels[i][2], fuelStats[i][0][0], fuelStats[i][0][1], trisoStatsAlt[i][0], fuelStats[i][0][2], primer[i], trisoStatsAlt[i][1]);
 	//zirconium
-	mods.nuclearcraft.SolidFission.addRecipe(array[4], dFuels[i][3], fuelStats[i][1][0], fuelStats[i][1][1], trisoStatsAlt[i][0], fuelStats[i][1][2], true, trisoStatsAlt[i][1]);
+	mods.nuclearcraft.SolidFission.addRecipe(array[4], dFuels[i][3], fuelStats[i][1][0], fuelStats[i][1][1], trisoStatsAlt[i][0], trisoStats[i][2], primer[i], trisoStatsAlt[i][1]);
 }
 
-// reprocessing
-ddecayRad = [0.336,0.336,1.30e-6,1.52e-6] as double[];
+// reprocessing the depleted fuels
+dIso = [[[fis[0][1],fer[0][1].amount(3),fis[1][1].amount(2),fer[1][1].amount(2)],[fis[0][2],fer[0][2].amount(3),fis[1][2].amount(2),fer[1][2].amount(2)],[fis[0][3],fer[0][3].amount(3),fis[1][3].amount(2),fer[1][3].amount(2)],[fis[0][4],fer[0][4].amount(3),fis[1][4].amount(2),fer[1][4].amount(2)]],[[fis[1][1],fer[1][1].amount(3),<nuclearcraft:curium:11>*2,<nuclearcraft:berkelium:1>],[fis[1][1],fer[1][1].amount(3),<nuclearcraft:curium:12>*2,<nuclearcraft:berkelium:2>],[fis[1][1],fer[1][1].amount(3),<nuclearcraft:curium:13>*2,<nuclearcraft:berkelium:3>],[fis[1][1],fer[1][1].amount(3),<nuclearcraft:curium:14>*2,<nuclearcraft:berkelium:4>]],[[fis[2][1],fer[2][1].amount(2),fer[2][1].amount(3),<contenttweaker:californium53carbide>],[fis[2][2],fer[2][2].amount(2),fer[2][2].amount(3),<contenttweaker:californium53oxide>],[fis[2][3],fer[2][3].amount(2),fer[2][3].amount(3),<contenttweaker:californium53nitride>],[fis[2][4],fer[2][4].amount(2),fer[2][4].amount(3),<contenttweaker:californium53zirconium>]]] as IIngredient[][][];
+
 for i,array in dFuels{
 	//triso
-	mods.nuclearcraft.FuelReprocessor.addRecipe(array[0].amount(9), fer[i][1].amount(2), fer[i][1].amount(2), <ore:dustGraphite>.amount(3), fer[i][1].amount(2), fer[i][1].amount(2), <nuclearcraft:alloy:13>);
+	mods.nuclearcraft.FuelReprocessor.addRecipe(array[0].amount(9), dIso[i][0][0], dIso[i][0][1], <ore:dustGraphite>.amount(4), dIso[i][0][2], dIso[i][0][3], <nuclearcraft:alloy:13>);
 	//oxide
-	mods.nuclearcraft.FuelReprocessor.addRecipe(array[1].amount(9), fer[i][2].amount(2), fer[i][2].amount(2), null, fer[i][2].amount(2), fer[i][2].amount(2), null);
+	mods.nuclearcraft.FuelReprocessor.addRecipe(array[1].amount(9), dIso[i][1][0], dIso[i][1][1], null, dIso[i][1][2], dIso[i][1][3],null);
 	//nitride
-	mods.nuclearcraft.FuelReprocessor.addRecipe(array[2].amount(9), fer[i][3].amount(2), fer[i][3].amount(2), null, fer[i][3].amount(2), fer[i][3].amount(2), null);
+	mods.nuclearcraft.FuelReprocessor.addRecipe(array[2].amount(9), dIso[i][2][0], dIso[i][2][1], null, dIso[i][2][2], dIso[i][2][3],null);
 	//zirc
-	mods.nuclearcraft.FuelReprocessor.addRecipe(array[3].amount(9), fer[i][4].amount(2), fer[i][4].amount(2), <nuclearcraft:dust:10>, fer[i][4].amount(2), fer[i][4].amount(2), null);
+	mods.nuclearcraft.FuelReprocessor.addRecipe(array[3].amount(9), dIso[i][3][0], dIso[i][3][1], <nuclearcraft:dust:10> * 2, dIso[i][3][2], dIso[i][3][3], null);
 	for item in array{
 		mods.nuclearcraft.Radiation.setRadiationLevel(item, ddecayRad[i]);
 	}
 }
 
-
-/* -=-=-=-=- Pa-231 Based Fuels -=-=-=-=-*/
-val paFuels = [[<contenttweaker:protactinium_fuel>,<contenttweaker:protactinium_fuel_carbide>,<contenttweaker:protactinium_fuel_oxide>,<contenttweaker:protactinium_fuel_nitride>,<contenttweaker:protactinium_fuel_zirconium>],[<contenttweaker:hprotactinium_fuel>,<contenttweaker:hprotactinium_fuel_carbide>,<contenttweaker:hprotactinium_fuel_oxide>,<contenttweaker:hprotactinium_fuel_nitride>,<contenttweaker:hprotactinium_fuel_zirconium>]] as IIngredient[][];
-val dpaFuels = [[<contenttweaker:dprotactinium_fuel_triso>,<contenttweaker:dprotactinium_fuel_oxide>,<contenttweaker:dprotactinium_fuel_nitride>,<contenttweaker:dprotactinium_fuel_zirconium>],[<contenttweaker:dhprotactinium_fuel_triso>,<contenttweaker:dhprotactinium_fuel_oxide>,<contenttweaker:dhprotactinium_fuel_nitride>,<contenttweaker:dhprotactinium_fuel_zirconium>]] as IIngredient[][];
-
-val paeff = [1.3,1.35] as double[];
-val paStats = [[[lifetimeMultiplier*9600,60,160],[lifetimeMultiplier*12000,48,200],[lifetimeMultiplier*7680,130,136]],[[lifetimeMultiplier*9600,180,80],[lifetimeMultiplier*12000,144,80],[lifetimeMultiplier*7680,225,68]]] as int[][][];
-val burnrad = 5.16e-4;
-val pebbles = [<contenttweaker:protactinium_fuel_triso>,<contenttweaker:hprotactinium_fuel_triso>] as IItemStack[];
-
-//base recipe
-mods.nuclearcraft.Assembler.addRecipe(<ore:dustProtactinium231>, <ore:ingotTBU>*8, null, null, paFuels[0][0]*9);
-mods.nuclearcraft.Assembler.addRecipe(<ore:dustProtactinium231>*2, paFuels[0][0]*6, null, null, paFuels[1][0]*8);
-
-//non-base recipes
-for i, array in paFuels{
-	for item in array{
-		mods.nuclearcraft.Radiation.setRadiationLevel(item, decayRad[i+2]);
-	}
-	mods.nuclearcraft.AlloyFurnace.addRecipe(array[0], graphite, array[1]);
-	mods.nuclearcraft.Infuser.addRecipe(array[0], <fluid:oxygen>*1000, array[2]);
-	mods.nuclearcraft.Infuser.addRecipe(array[0], <fluid:nitrogen>*1000, array[3]);
-	mods.nuclearcraft.AlloyFurnace.addRecipe(array[0], zirconium, array[4]);
-	furnace.addRecipe(<contenttweaker:protactinium_fuel>, array[3]);
-	furnace.addRecipe(<contenttweaker:protactinium_fuel>, array[2]);
-	mods.nuclearcraft.Separator.addRecipe(array[1], array[0], <nuclearcraft:dust:8>);
-	mods.nuclearcraft.Separator.addRecipe(array[4], array[0], <nuclearcraft:dust:10>);
-	//pebbles
-	mods.nuclearcraft.Assembler.addRecipe(array[1]*9, <ore:dustGraphite>, <nuclearcraft:part:15>, <nuclearcraft:alloy:13>, pebbles[i]*9);
-mods.nuclearcraft.PebbleFission.addRecipe(pebbles[i], dpaFuels[i][0], paStats[i][0][0], paStats[i][0][1], paeff[i], paStats[i][2][2], false, burnrad);
-	mods.nuclearcraft.Radiation.setRadiationLevel(pebbles[i], decayRad[i+2]);
-	//oxide
-	mods.nuclearcraft.SolidFission.addRecipe(array[2], dpaFuels[i][1], paStats[i][0][0], paStats[i][0][1], paeff[i], paStats[i][0][2], false, burnrad);
-	//nitride
-	mods.nuclearcraft.SolidFission.addRecipe(array[3], dpaFuels[i][2], paStats[i][1][0], paStats[i][1][1], paeff[i], paStats[i][1][2], false, burnrad);
-	//zirconium
-	mods.nuclearcraft.SolidFission.addRecipe(array[4], dpaFuels[i][3], paStats[i][2][0], paStats[i][2][1], paeff[i], paStats[i][2][2], false, burnrad);
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Improved RTGs -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+val radioIso = [<ore:dustPolonium>,<ore:dustRadium>,<ore:ingotPlutonium238>,<ore:ingotAmericium241>,<ore:ingotCalifornium250>] as IIngredient[];
+val decayIso = [<ore:dustLead>,<ore:dustLead>,<ore:dustRadium>,<ore:ingotNeptunium237>,<ore:ingotCurium246>] as IIngredient[];
+if(loadedMods has "qmd"){
+	decayIso[2] = <ore:ingotUranium234>;
 }
 
+val shielding = [<nuclearcraft:rad_shielding>,<nuclearcraft:rad_shielding:2>,<nuclearcraft:rad_shielding>,<nuclearcraft:rad_shielding:1>,<nuclearcraft:rad_shielding:2>] as IIngredient[];
+val red = <ore:dustRedstone>;
+val sige = <contenttweaker:si_ge>;
+mods.nuclearcraft.RockCrusher.addRecipe(<ore:oreLead>*5,<ore:dustLead>*10, <contenttweaker:gemgermanium>, null);
+mods.nuclearcraft.AlloyFurnace.addRecipe(<contenttweaker:gemgermanium>, <ore:itemSilicon>, sige);
 
-//reprocessing
-//triso
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[0][0] * 9, <ore:ingotTBUCarbide> * 4, <ore:ingotUranium233Carbide>, <ore:dustGraphite>.amount(4), <ore:ingotUranium234>, <ore:ingotUranium235Carbide>*2, <nuclearcraft:alloy:13>);
-//oxide
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[0][1] * 9, <ore:ingotTBUOxide> * 4, <ore:ingotUranium233Oxide>, null, <ore:ingotUranium234>, <ore:ingotUranium235Oxide>*2,null);
-//nitride
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[0][2] * 9, <ore:ingotTBUNitride> * 4, <ore:ingotUranium233Nitride>, null, <ore:ingotUranium234>, <ore:ingotUranium235Nitride>*2,null);
-//zirc
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[0][3] * 9, <ore:ingotTBUZA> * 4, <ore:ingotUranium233ZA>, <nuclearcraft:dust:10> * 2, <ore:ingotUranium234>, <ore:ingotUranium235ZA>*2, null);
-
-//triso
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[1][0] * 9, <ore:ingotTBUCarbide> * 2, <ore:ingotUranium233Carbide>*2, <ore:dustGraphite>.amount(4), <ore:ingotUranium235Carbide>*2, <ore:ingotNeptunium237Carbide>, <nuclearcraft:alloy:13>);
-//oxide
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[1][1] * 9, <ore:ingotTBUOxide> * 2, <ore:ingotUranium233Oxide>*2, null, <ore:ingotUranium235Oxide>*2, <ore:ingotNeptunium237Oxide>, null);
-//nitride
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[1][2] * 9, <ore:ingotTBUNitride> * 2, <ore:ingotUranium233Nitride>*2, null, <ore:ingotUranium235Nitride>*2, <ore:ingotNeptunium237Nitride>,null);
-//zirc
-mods.nuclearcraft.FuelReprocessor.addRecipe(dpaFuels[1][3] * 9, <ore:ingotTBUZA> * 2, <ore:ingotUranium233ZA>*2, <nuclearcraft:dust:10> * 2, <ore:ingotUranium235ZA>*2, <ore:ingotNeptunium237ZA>, null);
-for i,array in dpaFuels{
-	for item in array{
-		mods.nuclearcraft.Radiation.setRadiationLevel(item, ddecayRad[i]);
-	}
-}
-
-
-/* -=-=-=-=- Isotope Stuff -=-=-=-=-*/
-val qIsoNames= [[<contenttweaker:mendelevium58>,<contenttweaker:mendelevium58carbide>,<contenttweaker:mendelevium58oxide>,<contenttweaker:mendelevium58nitride>,<contenttweaker:mendelevium58zirconium>],[<contenttweaker:flerovium98>,<contenttweaker:flerovium98carbide>,<contenttweaker:flerovium98oxide>,<contenttweaker:flerovium98nitride>,<contenttweaker:flerovium98zirconium>]] as IIngredient[][];
-val qisoN2 = [<contenttweaker:mendelevium58>,<contenttweaker:flerovium98>] as IItemStack[];
-
-val qdecays = [<contenttweaker:einsteinium54>,<contenttweaker:einsteinium54carbide>,<contenttweaker:einsteinium54oxide>,<contenttweaker:einsteinium54nitride>,<contenttweaker:einsteinium54zirconium>] as IIngredient[];
-decayRad = [7.09,1.0e-9] as double[];
-
-for i,array in qIsoNames{
-	// adding carbides
-	mods.nuclearcraft.AlloyFurnace.addRecipe(array[0], graphite, array[1]);
-	// adding oxides
-	mods.nuclearcraft.Infuser.addRecipe(array[0], <fluid:oxygen>*1000, array[2]);
-	// adding nitrides
-	mods.nuclearcraft.Infuser.addRecipe(array[0], <fluid:nitrogen>*1000, array[3]);
-	// adding zirconium alloys
-	mods.nuclearcraft.AlloyFurnace.addRecipe(array[0], zirconium, array[4]);
-	// recipes for normal
-	furnace.addRecipe(qisoN2[i], array[3]);
-	furnace.addRecipe(qisoN2[i], array[2]);
-	mods.nuclearcraft.Separator.addRecipe(array[1], array[0], <nuclearcraft:dust:8>);
-	mods.nuclearcraft.Separator.addRecipe(array[4], array[0], <nuclearcraft:dust:10>);
-	//adding decays
-	for j,item in array{
-		mods.nuclearcraft.Radiation.setRadiationLevel(item, decayRad[i]);
-		if (i!=1){
-			mods.nuclearcraft.DecayHastener.addRecipe(item, qdecays[j],1.0,1.0,decayRad[i]);
-		}
-	}
-}
-var uran = <ore:ingotUranium235>;
-mods.nuclearcraft.DecayHastener.removeRecipeWithInput(uran);
-uran = <ore:ingotUranium235>|<ore:ingotUranium235Oxide>|<ore:ingotUranium235Nitride>;
-mods.nuclearcraft.DecayHastener.addRecipe(uran, <ore:dustProtactinium231>,1.0,1.0,1.42e-9);
-/*
-mods.nuclearcraft.DecayHastener.addRecipe(<ore:dustProtactinium231>,<ore:dustLead>,0.775,1.0,30.0e-6);
-mods.nuclearcraft.DecayHastener.addRecipe(<ore:ingotThorium>,<ore:dustLead>,1.0125,1.0,71.0e-12);
-mods.nuclearcraft.DecayHastener.addRecipe(<ore:dustRadium>,<ore:dustLead>,0.675,1.0,625.0e-6);
-mods.nuclearcraft.DecayHastener.addRecipe(<ore:dustPolonium>,<ore:dustLead>,0.2875,1.0,0.293);
-val amer = <ore:ingotAmericium242>|<ore:ingotAmericium242Oxide>|<ore:ingotAmericium242Nitride>;
-mods.nuclearcraft.DecayHastener.addRecipe(amer,<ore:dustLead>,0.56875,1.0,0.007);
-*/
-
-
+val input = [<contenttweaker:rtg_po>,<contenttweaker:rtg_ra>,<contenttweaker:rtg_pu>,<contenttweaker:rtg_am>,<contenttweaker:rtg_cf>] as IIngredient[];
+val output = [<contenttweaker:rtg_po_done>,<contenttweaker:rtg_ra_done>,<contenttweaker:rtg_pu_done>,<contenttweaker:rtg_am_done>,<contenttweaker:rtg_cf_done>] as IIngredient[];
+//mean lifetime, power, radiation
+val rtgstats = [[910.0,11000.0,2.10e-15],[3840000.0,20.0,0.0678],[210480.0,50.0,2.38e-12],[1038000.0,10.0,2.41e-6],[31400.0,370.0,0.342]] as double[][];
+for i,item in input{
+	mods.nuclearcraft.Assembler.addRecipe(radioIso[i].amount(9), shielding[i].amount(4), red*2, sige*2, item);
+	mods.nuclearcraft.DecayGenerator.addRecipe(item, output[i], rtgstats[i][0], rtgstats[i][1], rtgstats[i][2]);
+	mods.nuclearcraft.FuelReprocessor.addRecipe(output[i], decayIso[i].amount(9), shielding[i].amount(4), null, red*2, sige*2, null);
+	mods.nuclearcraft.Radiation.setRadiationLevel(item, rtgstats[i][2]);
 }
